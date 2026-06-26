@@ -1,8 +1,8 @@
 [
     {
         "id": 3,
-        "description": "breakfast",
-        "amount": 7.5,
+        "description": "pizza",
+        "amount": 15.0,
         "date": "2026-06-24"
     },
     {
@@ -10,5 +10,35 @@
         "description": "snacks",
         "amount": 15.0,
         "date": "2026-06-24"
+    },
+    {
+        "id": 5,
+        "description": "Food",
+        "amount": 20.0,
+        "date": "2026-05-26"
+    },
+    {
+        "id": 6,
+        "description": "more food",
+        "amount": 30.0,
+        "date": "2026-05-26"
+    },
+    {
+        "id": 7,
+        "description": "supplements",
+        "amount": 50.0,
+        "date": "2026-04-26"
+    },
+    {
+        "id": 8,
+        "description": "apart",
+        "amount": 150.0,
+        "date": "2026-04-26"
+    },
+    {
+        "id": 9,
+        "description": "investment",
+        "amount": 100.0,
+        "date": "2026-04-26"
     }
 ]
