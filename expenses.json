@@ -40,5 +40,11 @@
         "description": "investment",
         "amount": 100.0,
         "date": "2026-04-26"
+    },
+    {
+        "id": 10,
+        "description": "Lunch",
+        "amount": 25.0,
+        "date": "2026-06-30"
     }
 ]

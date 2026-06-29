@@ -6,8 +6,13 @@ now = datetime.now()
 timestamp = now.strftime("%Y-%m-%d")
 
 def load_expenses():
-    with open("expenses.json", "r") as file:
-        return json.load(file)
+    try:
+        with open("expenses.json", "r") as file:
+            return json.load(file)
+    except FileNotFoundError:
+        return []
+    except json.JSONDecodeError:
+        return []
 
 def save_expenses(expenses):
     with open("expenses.json", "w") as file:
@@ -21,7 +26,7 @@ if command == "add":
     if len(sys.argv) < 4:
         print("Please provide a description and amount for the expense.")
         sys.exit(1)
-    if len (sys.argv) > 4:
+    if len(sys.argv) > 4:
         print("Please provide only a description and amount for the expense.")
         sys.exit(1)
     expenses = load_expenses()
@@ -66,7 +71,7 @@ elif command == "delete":
     if len(sys.argv) < 3:
         print("Please provide an expense ID to delete. Use 'list' to see available IDs.")
         sys.exit(1)
-    if len (sys.argv) > 3:
+    if len(sys.argv) > 3:
         print("Please provide only an expense ID to delete. Use 'list' to see available IDs.")
         sys.exit(1)
     expenses = load_expenses()
@@ -91,7 +96,7 @@ elif command == "update":
     if len(sys.argv) < 5:
         print("Please provide an expense ID, description, and amount to update. Use 'list' to see available IDs.")
         sys.exit(1)
-    if len (sys.argv) > 5:
+    if len(sys.argv) > 5:
         print("Please provide only an expense ID, description, and amount to update. Use 'list' to see available IDs.")
         sys.exit(1)
     expenses = load_expenses()
